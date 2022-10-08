@@ -6,7 +6,7 @@
  import './Css/estiloLG.css';
 import PiedraPapelTijeras from "./Componentes/PiedraPapelTijeras";
 import Footer from "./Componentes/Footer";
-import './imagenes/15.jpg';
+import './Imagenes/15.jpg';
 
 export default function Game() {
     return (

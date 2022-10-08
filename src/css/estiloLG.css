@@ -1,7 +1,7 @@
 .nofun{
     text-align: center;
     color:white;
-    background-image: url(../imagenes/Error.jpg);
+    background-image: url(../Imagenes/Error.jpg);
     height: 1000px;
     width: 100%;
     line-height: 1000px;
@@ -9,11 +9,11 @@
     
 }
 .botones {
-    background-image: url(../imagenes/fondoBotones.png);
+    background-image: url(../Imagenes/fondoBotones.png);
     background-position: 50% 50%;
 }
 .masJuegos{
-    background-image:url(../imagenes/masJuegos.jpg) ;
+    background-image:url(../Imagenes/masJuegos.jpg) ;
     height: 1000px ;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -37,7 +37,7 @@ footer
     height: 200px;
 }
 .piePagina{
-    background-image: url(../imagenes/15.jpg);
+    background-image: url(../Imagenes/15.jpg);
     height: 100px;
     width: 130px;
     display: flex;
