@@ -3,7 +3,7 @@ import React, { useState , useEffect } from "react";
 import palabras from "../json/palabras.json"
 import linkImagenes from "../json/linkImagenes.json"
 import Card from 'react-bootstrap/Card';
-import "../css/stylesAhorcadito.css"
+
 
 export default function Ahorcadito ()
 {

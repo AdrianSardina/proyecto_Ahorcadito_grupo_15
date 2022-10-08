@@ -19,7 +19,7 @@ class Nosotros extends React.Component {
                             <i className="fab fa-angular"></i>
                             <h3>Guardo, Lautaro Guillermo</h3>
                             <div className="Imagenes">
-                                <img src="../Imagenes/Lautaro.jpeg" ></img>
+                            <img src="../img/Lautaro.jpeg" ></img>
                             </div>
                             <p>"Lo que hoy digamos pronto será olvidado, lo que hagamos perdurará durante miles y miles de años."</p>
                             <p>Estudiante en la Facultad de Ingenieria de Jujuy</p>
@@ -37,7 +37,7 @@ class Nosotros extends React.Component {
                             <i className="fab fa-angular"></i>
                             <h3>Ramírez, Natalia Lucia</h3>
                             <div className="Imagenes">
-                                <img src="../Imagenes/RamirezNatalia.jpg" ></img>
+                            <img src="../img/RamirezNatalia.jpg" ></img>
                             </div>
                             <p>"hay que vivir el hoy no el mañana, eso puede esperar mi presente es mas importante que una suposicion de lo que puede pasarar"</p>
                             <p>Estudiante en la Facultad de Ingenieria de Jujuy</p>

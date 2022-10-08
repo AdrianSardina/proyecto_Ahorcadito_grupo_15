@@ -19,10 +19,12 @@ body {
     height: 100px;
     width: 250px;
     border-radius: 50px;
-    margin-left: 540px; 
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .title {
+    
     margin-bottom: 40px;
     font-size: 100x;
     font-weight: 600;
@@ -30,13 +32,7 @@ body {
     color: rgb(197, 85, 197);
 }
 
-p {
-    margin-bottom: 40px;
-    font-size: 18px;
-    color: #fff;
-    padding: 100px;
-    line-height: 10px; 
-}
+
 
 .content {
     height: 340px;
@@ -52,7 +48,14 @@ p {
     flex-wrap: wrap;
     text-align: center;
 }
-
+.box-container p
+{
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 100px;
+    line-height: 10px; 
+}
 .box-container .box {
     height: 100x;
     width: 320px;

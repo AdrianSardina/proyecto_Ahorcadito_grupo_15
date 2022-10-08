@@ -31,7 +31,9 @@
 
 
 .spinning-text-wrapper {
-    margin-left: 450px;
+    margin-right: auto; 
+    margin-left : auto; 
+
     position: relative;
     width: 400px;
     height: 400px;

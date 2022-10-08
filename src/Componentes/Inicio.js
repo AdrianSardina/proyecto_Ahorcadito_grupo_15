@@ -1,7 +1,7 @@
 import React, { Children } from "react";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import inicio from '../css/inicio.css';
+
 
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -36,7 +36,7 @@ function Inicio({ text, Children }) {
                     <img src="../img/nene.png" ></img>
 
                     <div className="boton1">
-                        <Link to="/nosotros"  >
+                        <Link to="/ahorcadito"  >
                             <Button variant="secondary" size="lg" active>
                                *---Jugar---*
                             </Button>{' '}

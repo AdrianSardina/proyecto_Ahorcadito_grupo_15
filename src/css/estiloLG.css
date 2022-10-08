@@ -5,16 +5,24 @@
     height: 1000px;
     width: 100%;
     line-height: 1000px;
+}
 .botones {
     background-image: url(../Imagenes/fondoBotones.png);
     background-position: 50% 50%;
 }
 .masJuegos{
+    
     background-image:url(../Imagenes/masJuegos.jpg) ;
     height: 1000px ;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+}
+.b1
+{
+    display: flex;
+    justify-content: left;
+    text-align: left;
 }
 .textomasjuegos{
     text-align: center;
