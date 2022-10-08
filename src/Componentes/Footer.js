@@ -7,7 +7,8 @@ class Footer extends React.Component {
         return (
             <>
                 <footer>
-                    <p>Creado con fines de estudio By GRUPO15</p>
+                <h1>Gracias por usar nuestra Página</h1>
+                    <p>Creada con Fines de Estudio By Grupo 15</p>
                     <div className="piePagina"></div>
                 </footer>
             </>

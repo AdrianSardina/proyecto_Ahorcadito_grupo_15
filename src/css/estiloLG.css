@@ -38,8 +38,8 @@ footer
 }
 .piePagina{
     background-image: url(../imagenes/15.jpg);
-    height: 150px;
-    width: 100px;
+    height: 100px;
+    width: 130px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
