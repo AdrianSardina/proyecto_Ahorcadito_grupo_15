@@ -1,0 +1,19 @@
+.nofun{
+    text-align: center;
+    color: whitesmoke;
+    background-color: red;
+    height: 1000px;
+    width: 100%;
+    line-height: 1000px;
+    
+    
+    
+}
+.botones {
+    display: flex;
+    justify-content:space-around;
+    background-color: rgb(48, 42, 42);
+}
+.botones botton{
+    background-color: red;
+}
