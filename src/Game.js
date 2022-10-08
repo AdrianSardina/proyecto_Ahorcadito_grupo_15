@@ -5,22 +5,14 @@
 // import NotFound from "./Componentes/NotFound";
 // import './css/estiloLG.css';
 // import Inicio from "./Componentes/Inicio";
+import Nosotros from "./Componentes/Nosotros";
+import './Css/Estilos.css';
 
 export default function Game()
 {
     return(
         <>
-        {/* <Boton></Boton>
-        <BrowserRouter>
-        <Routes>
-        <Route path="/" element={<Inicio/>} />;
-        <Route path="/game" />;
-        <Route path="/nosotros" />;
-            <Route path="/masjuegos" element={<Masjuegos/>} />;
-            <Route path="*" element={<NotFound/>} />;
-        </Routes>
-        </BrowserRouter> */}
-        <h1>hola</h1>
+        <Nosotros></Nosotros>
         </>
         
     )
