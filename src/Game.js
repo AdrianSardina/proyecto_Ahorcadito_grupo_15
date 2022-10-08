@@ -1,3 +1,9 @@
+
+//Nuevos
+ import Nosotros from "./Componentes/Nosotros"; 
+ import './Css/Estilos.css';
+ 
+ 
  import Boton from "./Componentes/Boton"
  import 'bootstrap/dist/css/bootstrap.min.css';
  import { BrowserRouter, Routes, Route} from "react-router-dom";
@@ -8,10 +14,12 @@ import PiedraPapelTijeras from "./Componentes/PiedraPapelTijeras";
 import Footer from "./Componentes/Footer";
 import './Imagenes/15.jpg';
 
+
 export default function Game() {
     return (
         
         <>
+
             
         <Boton></Boton>
         <BrowserRouter>
@@ -25,6 +33,7 @@ export default function Game() {
         </Routes>
         </BrowserRouter> 
         <Footer></Footer>
+
         
         </>
 
