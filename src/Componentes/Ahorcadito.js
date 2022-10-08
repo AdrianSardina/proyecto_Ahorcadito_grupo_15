@@ -1,24 +1,29 @@
-import { Button,ButtonGroup } from "react-bootstrap";
+import { Button} from "react-bootstrap";
 import React, { useState , useEffect } from "react";
-import palabras from "../json/palabras.json";
-
+import palabras from "../json/palabras.json"
+import linkImagenes from "../json/linkImagenes.json"
+import Card from 'react-bootstrap/Card';
+import "../css/stylesAhorcadito.css"
 
 export default function Ahorcadito ()
 {
-   
+    
     const [letraElegida,setLetraElegida] = useState (); //Guarda la letra seleccionada al jugar 
     const [palabraElegida,setPalabraElegida] = useState (''); //Guarda la palabra elegida de la lista para jugar
     const [palabraMostrada,setPalabraMostrada] = useState ([]); // Para Mostrar en pantalla
     const [vidas,setVidas]= useState(0);
-    const [jugarHabilitado,setjugarHabilitado] = useState(false);// Para abilitar o desabilitar los botones.
+    const [jugarHabilitado,setjugarHabilitado] = useState(false);
     const [letrasUsadas,setLetrasUsadas] = useState("")
+    const [resultadoFinal,setResultadoFinal] = useState("");
+    
     function Jugar()
     {    
          setVidas(5);
          setPalabraElegida(palabras[Math.floor(Math.random()*palabras.length-1)]); 
          setPalabraMostrada(Array(palabraElegida.length).fill("-")); 
+         setLetrasUsadas("")
+         setResultadoFinal("");
          setjugarHabilitado(true);
-         
     }
     function RevisarLetra()
     {  
@@ -36,6 +41,7 @@ export default function Ahorcadito ()
                 if(!palabraMostrada.includes("-"))
                 {
                     setjugarHabilitado(false);
+                    setResultadoFinal("Ganaste");
                     console.log("Ganaste")
                 }
             }else
@@ -45,6 +51,8 @@ export default function Ahorcadito ()
                 if(vidas <=1)
                 {
                     setjugarHabilitado(false);
+                    setResultadoFinal("Perdiste, la palabra era: " +palabraElegida);
+                    console.log(palabraElegida)
                     console.log("Perdiste");    
                 }    
             }
@@ -82,48 +90,62 @@ export default function Ahorcadito ()
     useEffect(() => {RevisarLetra();}, [letraElegida]); 
     
     return(
-        <>
-        <h1>ahorcadito</h1>
+        <div className="container">
+        
+            <h1 >Ahorcadito</h1>
+          
+      
+
         
         <Button onClick={Jugar} disabled={jugarHabilitado}>Jugar</Button>
         
-
-
-        {/* Botones */}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('A')}disabled={!jugarHabilitado}>A</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('B')}disabled={!jugarHabilitado}>B</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('C')}disabled={!jugarHabilitado}>C</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('D')}disabled={!jugarHabilitado}>D</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('E')}disabled={!jugarHabilitado}>E</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('F')}disabled={!jugarHabilitado}>F</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('G')}disabled={!jugarHabilitado}>G</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('H')}disabled={!jugarHabilitado}>H</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('I')}disabled={!jugarHabilitado}>I</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('J')}disabled={!jugarHabilitado}>J</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('K')}disabled={!jugarHabilitado}>K</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('L')}disabled={!jugarHabilitado}>L</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('M')}disabled={!jugarHabilitado}>M</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('N')}disabled={!jugarHabilitado}>N</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('O')}disabled={!jugarHabilitado}>O</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('P')}disabled={!jugarHabilitado}>P</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('Q')}disabled={!jugarHabilitado}>Q</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('R')}disabled={!jugarHabilitado}>R</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('S')}disabled={!jugarHabilitado}>S</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('T')}disabled={!jugarHabilitado}>T</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('U')}disabled={!jugarHabilitado}>U</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('V')}disabled={!jugarHabilitado}>V</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('W')}disabled={!jugarHabilitado}>W</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('X')}disabled={!jugarHabilitado}>X</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('Y')}disabled={!jugarHabilitado}>Y</Button>{' '}
-        <Button variant={jugarHabilitado ? "primary":"danger"} onClick={() => setLetraElegida('Z')}disabled={!jugarHabilitado}>Z</Button>
+        
+        <Card bg="success" border='dark' style={{ width: '70%' }}>
+            <Card.Header><h2>Intentos Restantes: {vidas}</h2></Card.Header>
+            <Card.Img variant="top" src={linkImagenes[5-vidas]} />
+            <Card.Body>  
+                <h1>{palabraMostrada}</h1>
+             <br></br>
+             <h1>{resultadoFinal}</h1>
+             </Card.Body>
+             </Card>
        
+        <br></br>
+        
 
 
-
-        <p>{palabraMostrada}</p>
-      <p>{vidas}</p>
+       
+        
+        {/* Botones */}
+        <Button onClick={() => setLetraElegida('A')}disabled={!jugarHabilitado}>A</Button>
+        <Button onClick={() => setLetraElegida('B')}disabled={!jugarHabilitado}>B</Button>
+        <Button onClick={() => setLetraElegida('C')}disabled={!jugarHabilitado}>C</Button>
+        <Button onClick={() => setLetraElegida('D')}disabled={!jugarHabilitado}>D</Button>
+        <Button onClick={() => setLetraElegida('E')}disabled={!jugarHabilitado}>E</Button>
+        <Button onClick={() => setLetraElegida('F')}disabled={!jugarHabilitado}>F</Button>
+        <Button onClick={() => setLetraElegida('G')}disabled={!jugarHabilitado}>G</Button>
+        <Button onClick={() => setLetraElegida('H')}disabled={!jugarHabilitado}>H</Button>
+        <Button onClick={() => setLetraElegida('I')}disabled={!jugarHabilitado}>I</Button>
+        <Button onClick={() => setLetraElegida('J')}disabled={!jugarHabilitado}>J</Button>
+        <Button onClick={() => setLetraElegida('K')}disabled={!jugarHabilitado}>K</Button>
+        <Button onClick={() => setLetraElegida('L')}disabled={!jugarHabilitado}>L</Button>
+        <Button onClick={() => setLetraElegida('M')}disabled={!jugarHabilitado}>M</Button>
+        <Button onClick={() => setLetraElegida('N')}disabled={!jugarHabilitado}>N</Button>
+        <Button onClick={() => setLetraElegida('O')}disabled={!jugarHabilitado}>O</Button>
+        <Button onClick={() => setLetraElegida('P')}disabled={!jugarHabilitado}>P</Button>
+        <Button onClick={() => setLetraElegida('Q')}disabled={!jugarHabilitado}>Q</Button>
+        <Button onClick={() => setLetraElegida('R')}disabled={!jugarHabilitado}>R</Button>
+        <Button onClick={() => setLetraElegida('S')}disabled={!jugarHabilitado}>S</Button>
+        <Button onClick={() => setLetraElegida('T')}disabled={!jugarHabilitado}>T</Button>
+        <Button onClick={() => setLetraElegida('U')}disabled={!jugarHabilitado}>U</Button>
+        <Button onClick={() => setLetraElegida('V')}disabled={!jugarHabilitado}>V</Button>
+        <Button onClick={() => setLetraElegida('W')}disabled={!jugarHabilitado}>W</Button>
+        <Button onClick={() => setLetraElegida('X')}disabled={!jugarHabilitado}>X</Button>
+        <Button onClick={() => setLetraElegida('Y')}disabled={!jugarHabilitado}>Y</Button>
+        <Button onClick={() => setLetraElegida('Z')}disabled={!jugarHabilitado}>Z</Button>
+       
       
-        </>
+        </div>
         
     )
     
