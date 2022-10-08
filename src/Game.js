@@ -3,7 +3,7 @@
  import { BrowserRouter, Routes, Route} from "react-router-dom";
  import Masjuegos from "./Componentes/MasJuegos";
  import NotFound from "./Componentes/NotFound";
- import './css/estiloLG.css';
+ import './Css/estiloLG.css';
 import PiedraPapelTijeras from "./Componentes/PiedraPapelTijeras";
 import Footer from "./Componentes/Footer";
 import './imagenes/15.jpg';
